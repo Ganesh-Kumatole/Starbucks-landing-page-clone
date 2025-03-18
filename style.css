@@ -1,3 +1,5 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
+
 /* Initial setup */
 * {
   margin: 0;
@@ -7,8 +9,10 @@
 }
 
 :root {
-  --primary-green-light: #006241;
-  --primary-green-dark: #32462f;
+  --primary-light-green: #006241;
+  --primary-dark-color: #32462f;
+  --secondary-brown: #5f4633;
+  --light-white: #fbf5e7;
 }
 
 /* !!Navbar!! */
@@ -56,14 +60,14 @@ nav .nav-container {
   font-weight: 600;
 }
 .nav-container div.links ul li a:hover {
-  color: var(--primary-green-light);
+  color: var(--primary-light-green);
 }
 
 .nav-container div.searchBar-btns .search-bar i {
   color: black;
 }
 .nav-container div.searchBar-btns .search-bar i:hover {
-  color: var(--primary-green-light);
+  color: var(--primary-light-green);
   cursor: pointer;
 }
 .nav-container div.searchBar-btns .search-bar {
@@ -100,4 +104,107 @@ nav .nav-container {
 }
 .nav-container div.searchBar-btns a.secondary-btn:hover {
   background-color: #4c4c4c;
+}
+
+/* !! Hero-features !! */
+
+/* !! Hero !! */
+
+section.hero-features-wrap .hero-features-wrap-container {
+  max-width: 1300px;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* * Auto-fill? or Auto-fit? => No, as you wouldn't have any control over the arrangement of the grid-items or over the kind-of layout you actually want! */
+}
+
+.hero-features-wrap-container .hero {
+  height: 100vh;
+  margin: 2rem 0px;
+}
+
+.hero-features-wrap-container .hero-image {
+  background: url(images/hero-image.webp) no-repeat center / cover;
+}
+
+.hero-features-wrap-container .hero-content {
+  background-color: var(--primary-dark-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.hero-content h1.hero-title {
+  font-size: 3rem;
+}
+
+.hero-content h3.hero-sub-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.hero-content a.hero-btn {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 3rem;
+  padding: 10px 20px;
+}
+.hero-content a.hero-btn:hover {
+  background-color: #283826;
+}
+
+/* !! Features !! */
+
+.hero-features-wrap-container .feature1 {
+  margin: 0px 0px 2rem;
+  height: 400px;
+}
+
+.hero-features-wrap-container .feature1-image {
+  background: url(images/feature-01-image.jpg) no-repeat right / cover;
+}
+
+.hero-features-wrap-container .feature1-content {
+  background-color: var(--secondary-brown);
+  color: var(--light-white);
+  text-align: center;
+  text-wrap: balance;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  letter-spacing: 0.3px;
+}
+
+.feature1-content h2.feature1-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.feature1-content h3.feature1-sub-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.8;
+  width: 500px;
+}
+
+.feature1-content a.feature1-btn {
+  color: var(--light-white);
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 3rem;
+  padding: 10px 20px;
+}
+
+.feature1-content a.feature1-btn:hover {
+  background-color: #4c3829;
 }
