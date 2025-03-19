@@ -10,7 +10,8 @@
 
 :root {
   --primary-light-green: #006241;
-  --primary-dark-color: #32462f;
+  --primary-medium-green: #d1d1aa;
+  --primary-dark-green: #32462f;
   --secondary-brown: #5f4633;
   --light-white: #fbf5e7;
 }
@@ -128,7 +129,7 @@ section.hero-features-wrap .hero-features-wrap-container {
 }
 
 .hero-features-wrap-container .hero-content {
-  background-color: var(--primary-dark-color);
+  background-color: var(--primary-dark-green);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -163,8 +164,14 @@ section.hero-features-wrap .hero-features-wrap-container {
 
 /* !! Features !! */
 
-.hero-features-wrap-container .feature1 {
+.feature1,
+.feature2,
+.feature3,
+.feature4 {
   margin: 0px 0px 2rem;
+}
+
+.hero-features-wrap-container .feature1 {
   height: 400px;
 }
 
@@ -207,4 +214,152 @@ section.hero-features-wrap .hero-features-wrap-container {
 
 .feature1-content a.feature1-btn:hover {
   background-color: #4c3829;
+}
+
+.hero-features-wrap-container .feature2 {
+  height: 100vh;
+}
+
+.hero-features-wrap-container .feature2-image {
+  background: url(images/feature-02-image.webp) no-repeat center / cover;
+}
+
+.hero-features-wrap-container .feature2-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  background-color: var(--primary-dark-green);
+  color: white;
+  letter-spacing: 1px;
+}
+
+.feature2-content h2.feature2-title {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.feature2-content h3.feature2-sub-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.8;
+  text-wrap: balance;
+  width: 500px;
+}
+
+.feature2-content a.feature2-btn {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 3rem;
+  padding: 10px 20px;
+}
+
+.feature2-content a.feature2-btn:hover {
+  background-color: #283826;
+}
+
+.hero-features-wrap-container .feature3 {
+  height: 250px;
+}
+
+.hero-features-wrap-container .feature3-image {
+  background: url(images/feature-03-image.jpg) no-repeat right / cover;
+}
+
+.hero-features-wrap-container .feature3-content {
+  background-color: var(--primary-medium-green);
+}
+
+.hero-features-wrap-container .feature3-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-wrap: balance;
+  gap: 1.5rem;
+  background-color: var(--primary-medium-green);
+  color: var(--primary-dark-green);
+  letter-spacing: 1px;
+}
+
+.feature3-content h2.feature3-title {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.feature3-content h3.feature3-sub-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  width: 450px;
+}
+
+.feature3-content a.feature3-btn {
+  text-decoration: none;
+  color: var(--primary-dark-green);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 3rem;
+  padding: 10px 20px;
+}
+
+.feature3-content a.feature3-btn:hover {
+  background-color: #bfc29e;
+}
+
+.hero-features-wrap-container .feature4 {
+  height: 100vh;
+}
+
+.hero-features-wrap-container .feature4-image {
+  background: url(images/feature-04-image.jpg) no-repeat center / cover;
+}
+
+.hero-features-wrap-container .feature4-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  background-color: var(--primary-light-green);
+  color: white;
+  letter-spacing: 1px;
+}
+
+.feature4-content h2.feature4-title {
+  font-size: 3rem;
+  line-height: 1.2;
+  width: 500px;
+}
+
+.feature4-content h3.feature4-sub-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.8;
+  text-wrap: balance;
+  width: 500px;
+}
+
+.feature4-content a.feature4-btn {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 3rem;
+  padding: 10px 20px;
+}
+
+.feature4-content a.feature4-btn:hover {
+  background-color: #004e35;
 }
