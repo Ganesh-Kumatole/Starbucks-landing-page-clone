@@ -104,12 +104,13 @@ section.hero-features-wrap .hero-features-wrap-container {
   margin: 0px auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* * Auto-fill? or Auto-fit? => No, as you wouldn't have any control over the arrangement of the grid-items or over the kind-of layout you actually want! */
+  /* * Auto-fill? or Auto-fit? => No, as you wouldn't have any control over the arrangement of the grid-items or over the kind-of layout you actually want even though you'd have a complete control of responsiveness of grid without using media queries. */
 }
 
 .hero-features-wrap-container .hero {
   height: 500px;
   margin: 2rem 0px;
+  width: 100%;
 }
 
 .hero-features-wrap-container .hero-image {
@@ -480,7 +481,7 @@ footer section.secondary-links .container p {
   margin-top: 2rem;
 }
 
-/* !! Responsive -> Tablets (600px-800px) !! */
+/* !! Responsive -> Tablets (600px-850px) !! */
 
 @media (max-width: 1000px) {
   /* !! Navbar !! */
@@ -555,13 +556,76 @@ footer section.secondary-links .container p {
     text-align: center;
     line-height: 1.5;
   }
+
+  /* !! Grid: Hero + Features !! */
+
+  section.hero-features-wrap .hero-features-wrap-container {
+    grid-template-areas:
+      "hero-image"
+      "hero-content"
+      "feature1-image"
+      "feature1-content"
+      "feature2-image"
+      "feature2-content"
+      "feature3-image"
+      "feature3-content"
+      "feature4-image"
+      "feature4-content";
+    grid-template-columns: 1fr;
+  }
+  .hero-features-wrap-container .hero-image {
+    grid-area: hero-image;
+    margin-bottom: 0px;
+  }
+  .hero-features-wrap-container .hero-content {
+    grid-area: hero-content;
+    margin-top: 0px;
+    height: 350px;
+  }
+  .hero-features-wrap-container .feature1-image {
+    grid-area: feature1-image;
+    margin-bottom: 0px;
+  }
+  .hero-features-wrap-container .feature1-content {
+    grid-area: feature1-content;
+    margin-top: 0px;
+    height: 350px;
+  }
+  .hero-features-wrap-container .feature2-image {
+    grid-area: feature2-image;
+    margin-bottom: 0px;
+  }
+  .hero-features-wrap-container .feature2-content {
+    grid-area: feature2-content;
+    margin-top: 0px;
+    height: 450px;
+  }
+  .hero-features-wrap-container .feature2-content h2 {
+    width: 75%;
+  }
+  .hero-features-wrap-container .feature3-image {
+    grid-area: feature3-image;
+    margin-bottom: 0px;
+  }
+  .hero-features-wrap-container .feature3-content {
+    grid-area: feature3-content;
+    margin-top: 0px;
+  }
+  .hero-features-wrap-container .feature4-image {
+    grid-area: feature4-image;
+    margin-bottom: 0px;
+  }
+  .hero-features-wrap-container .feature4-content {
+    grid-area: feature4-content;
+    margin-top: 0px;
+    height: 350px;
+  }
 }
 
 /* !! Responsive -> Mobiles !! */
 
 @media (max-width: 500px) {
-  /* !! Navbar !! */
-
+  /* Existing Navbar Styles */
   nav .nav-container-mobile {
     padding: 7px 15px;
   }
@@ -574,4 +638,70 @@ footer section.secondary-links .container p {
   nav .nav-container-mobile a.sign-in-btn {
     font-size: 0.7rem;
   }
+
+  .hero-features-wrap-container .grid-items,
+  .hero-features-wrap-container .grid-items h1,
+  .hero-features-wrap-container .grid-items h2,
+  .hero-features-wrap-container .grid-items h3 {
+    width: 100%;
+  }
+
+  /* Hero Section */
+  .hero-features-wrap-container .hero-image {
+    height: 300px;
+  }
+  .hero-features-wrap-container .hero-content {
+    height: auto;
+    padding: 3rem 0px;
+  }
+  .hero-content h1.hero-title {
+    font-size: 2rem;
+  }
+  .hero-content h3.hero-sub-title {
+    font-size: 1.2rem;
+  }
+
+  /* Feature 1 */
+  .hero-features-wrap-container .feature1-image {
+    height: 250px;
+  }
+  .hero-features-wrap-container .feature1-content {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  /* Feature 2 */
+  .hero-features-wrap-container .feature2-image {
+    height: 350px;
+  }
+  .hero-features-wrap-container .feature2-content {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+  .feature2-content h2.feature2-title {
+    font-size: 2rem;
+  }
+
+  /* Feature 3 */
+  .hero-features-wrap-container .feature3-image {
+    height: 150px;
+  }
+  .hero-features-wrap-container .feature3-content {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  /* Feature 4 */
+  .hero-features-wrap-container .feature4-image {
+    height: 350px;
+  }
+  .hero-features-wrap-container .feature4-content {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+  .feature4-content h2.feature4-title {
+    font-size: 2rem;
+  }
 }
+
+/* * Ensure to assign appropriate height AND width for every element. */
